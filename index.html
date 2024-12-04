@@ -18,31 +18,26 @@
             background-color: #FBFBFB;
         }
 
-        /* Fixed Header section styles */
+        /* Header section styles */
         header {
             background: #608BC1;
             color: #FBFBFB;
             text-align: center;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 1rem 1rem 0.5rem;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem 2rem;
         }
 
         /* Profile photo styles */
         header img {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            margin-top: 0.5rem;
+            margin-top: 1rem;
         }
 
         /* Header text styles */
         header h1 {
             margin: 0.5rem 0 0.3rem;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
         }
 
@@ -57,9 +52,11 @@
             display: flex;
             justify-content: center;
             background-color: #608BC1;
-            padding: 0.5rem 0;
             position: sticky;
             top: 0;
+            z-index: 1000;
+            padding: 0.5rem;
+            border-bottom: 3px solid #CBDCEB;
         }
 
         nav a {
@@ -70,13 +67,9 @@
         }
 
         nav a:hover {
-            background-color: #4a74a6;
+            background-color: #CBDCEB;
+            color: #1F509A;
             border-radius: 4px;
-        }
-
-        /* Add spacing below the fixed header */
-        .content-offset {
-            margin-top: 150px;
         }
 
         /* Section styles */
@@ -127,80 +120,79 @@
     </style>
 </head>
 <body>
-    <!-- Fixed Header Section -->
+    <!-- Header Section -->
     <header>
         <img src="./images/piyachat.jpg" alt="Profile Photo">
         <h1>Piyachat Udomwong</h1>
         <p>International College of Digital Innovation</p>
         <p>Chiang Mai University</p>
-        <!-- Navigation Section -->
-        <nav>
-            <a href="#education">Education</a>
-            <a href="#publications">Publications</a>
-            <a href="#research">Research Interests</a>
-            <a href="#contact">Contact</a>
-            <a href="your_full_cv_link.pdf" target="_blank">Full CV</a>
-        </nav>
     </header>
 
-    <!-- Main Content with offset to avoid overlapping -->
-    <div class="content-offset">
-        <main>
-            <section id="education">
-                <h2>Education</h2>
-                <div class="education-item">
-                    <p><strong>2011-2016</strong></p>
-                    <p><strong>Ph.D. in Biology (Bioinformatics)</strong><br>
-                        University of York, United Kingdom<br>
-                        <strong>Dissertation:</strong> Association of genes in bacterial population genomics
-                    </p>
-                </div>
-                <div class="education-item">
-                    <p><strong>2008-2010</strong></p>
-                    <p><strong>M.S. Bioinformatics</strong><br>
-                        Chiang Mai University, Thailand<br>
-                        <strong>Thesis:</strong> Conditional random field for regulatory regions prediction in rice genome
-                    </p>
-                </div>
-                <div class="education-item">
-                    <p><strong>2005-2008</strong></p>
-                    <p><strong>B.S. Mathematics (First Class Honors)</strong><br>
-                        Chiang Mai University, Thailand<br>
-                        <strong>Senior Project:</strong> An iterative method for algebraic solution to interval equation
-                    </p>
-                </div>
-            </section>
+    <!-- Navigation Section -->
+    <nav>
+        <a href="#education">Education</a>
+        <a href="#publications">Publications</a>
+        <a href="#research">Research Interests</a>
+        <a href="#contact">Contact</a>
+        <a href="your_full_cv_link.pdf" target="_blank">Full CV</a>
+    </nav>
 
-            <section id="publications">
-                <h2>Publications</h2>
-                <div class="publications">
-                    <ul>
-                        <li>Pamonsupornwichit, T., et al. (2024). Engineering affinity of humanized ScFv targeting CD147 antibody... Journal of Molecular Graphics and Modelling.</li>
-                        <li>Wang, Z., et al. (2024). Destination image analysis and marketing strategies in panda tourism... Cogent Business & Management.</li>
-                        <li>Naing, S.Z.S., Udomwong, P. (2024). Public Opinions on ChatGPT... Data Intelligence.</li>
-                        <li>Zheng, X., et al. (2023). Preliminary Design and Construction Database for Laboratory Accidents... Electronics.</li>
-                        <li>Zheng, X., et al. (2023). Registered Data-Centered Lab Management System... Electronics.</li>
-                        <li>Wang, Z., et al. (2023). Big Data in Tourism Destination Image Measurement... CCAT Conference.</li>
-                    </ul>
-                </div>
-            </section>
+    <!-- Main Content -->
+    <main>
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <p><strong>2011-2016</strong></p>
+                <p><strong>Ph.D. in Biology (Bioinformatics)</strong><br>
+                    University of York, United Kingdom<br>
+                    <strong>Dissertation:</strong> Association of genes in bacterial population genomics
+                </p>
+            </div>
+            <div class="education-item">
+                <p><strong>2008-2010</strong></p>
+                <p><strong>M.S. Bioinformatics</strong><br>
+                    Chiang Mai University, Thailand<br>
+                    <strong>Thesis:</strong> Conditional random field for regulatory regions prediction in rice genome
+                </p>
+            </div>
+            <div class="education-item">
+                <p><strong>2005-2008</strong></p>
+                <p><strong>B.S. Mathematics (First Class Honors)</strong><br>
+                    Chiang Mai University, Thailand<br>
+                    <strong>Senior Project:</strong> An iterative method for algebraic solution to interval equation
+                </p>
+            </div>
+        </section>
 
-            <section id="research">
-                <h2>Research Interests</h2>
-                <p>Bioinformatics, computational biology, comparative genomics, data mining, data analytics, statistic learning, machine learning</p>
-            </section>
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="publications">
+                <ul>
+                    <li>Pamonsupornwichit, T., et al. (2024). Engineering affinity of humanized ScFv targeting CD147 antibody... Journal of Molecular Graphics and Modelling.</li>
+                    <li>Wang, Z., et al. (2024). Destination image analysis and marketing strategies in panda tourism... Cogent Business & Management.</li>
+                    <li>Naing, S.Z.S., Udomwong, P. (2024). Public Opinions on ChatGPT... Data Intelligence.</li>
+                    <li>Zheng, X., et al. (2023). Preliminary Design and Construction Database for Laboratory Accidents... Electronics.</li>
+                    <li>Zheng, X., et al. (2023). Registered Data-Centered Lab Management System... Electronics.</li>
+                    <li>Wang, Z., et al. (2023). Big Data in Tourism Destination Image Measurement... CCAT Conference.</li>
+                </ul>
+            </div>
+        </section>
 
-            <section id="contact">
-                <h2>Contact</h2>
-                <p>International College of Digital Innovation</p>
-                <p>Chiang Mai University ∙ 239 Nimmanhaemin Road, Suthep Subdistrict,</p>
-                <p>Muang Chiang Mai District, Chiang Mai, 50200 Thailand</p>
-                <p>Email: piyachat.u@cmu.ac.th, piyachat.u@icdi.cmu.ac.th</p>
-                <p>ORCID: 0000-0002-3915-6411</p>
-                <p>Scopus ID: 56530856100</p>
-            </section>
-        </main>
-    </div>
+        <section id="research">
+            <h2>Research Interests</h2>
+            <p>Bioinformatics, computational biology, comparative genomics, data mining, data analytics, statistic learning, machine learning</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>International College of Digital Innovation</p>
+            <p>Chiang Mai University ∙ 239 Nimmanhaemin Road, Suthep Subdistrict,</p>
+            <p>Muang Chiang Mai District, Chiang Mai, 50200 Thailand</p>
+            <p>Email: piyachat.u@cmu.ac.th, piyachat.u@icdi.cmu.ac.th</p>
+            <p>ORCID: 0000-0002-3915-6411</p>
+            <p>Scopus ID: 56530856100</p>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2024 Piyachat Udomwong. All Rights Reserved.</p>

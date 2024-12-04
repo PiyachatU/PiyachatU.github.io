@@ -4,45 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Website</title>
-    <!-- Import Poppins font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <style>
-        /* General styles for the entire website */
         body {
             font-family: 'Poppins', sans-serif;
             font-weight: 200;
             margin: 0;
             padding: 0;
-            line-height: 1.5;
             color: #608BC1;
             background-color: #FBFBFB;
         }
 
-        /* Header section styles */
         header {
             background: #608BC1;
             color: #FBFBFB;
             text-align: center;
+            padding: 5rem 2rem 2rem;
             position: relative;
-            padding: 8rem 2rem 3rem; /* Reduced top padding to reduce space between photo and title */
         }
 
-        /* Profile photo styles */
         header img {
-            width: 200px; /* Increased width for a larger photo */
-            height: 200px; /* Increased height for a larger photo */
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            /* border: 4px solid #FBFBFB; */
             position: absolute;
-            top: 3.5rem; /* Adjusted positioning */
+            top: 1rem;
             left: 50%;
             transform: translateX(-50%);
         }
 
-        /* Header text styles */
         header h1 {
-            margin: 10rem 0 0.5rem; /* Adjusted margin to reduce space below the photo */
-            font-size: 2.5rem;
+            margin: 7rem 0 0.5rem;
+            font-size: 2.2rem;
         }
 
         header p {
@@ -50,89 +43,76 @@
             font-size: 1rem;
         }
 
-        /* Navigation menu styles */
         nav {
-            margin: 1rem auto;
-            max-width: 800px;
-            text-align: center;
-            padding: 0.8rem;
-            background-color: #CBDCEB;
-            border-radius: 8px;
+            background: #CBDCEB;
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
-        /* Link styles in the navigation menu */
         nav a {
             color: #1F509A;
             text-decoration: none;
-            margin: 0 15px;
+            padding: 0.5rem 1rem;
             font-weight: bold;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            background-color: #608BC1;
+            color: #FBFBFB;
+            border-radius: 5px;
         }
 
-        /* Section styles */
         section {
             max-width: 800px;
-            margin: 20px auto;
+            margin: 2rem auto;
             padding: 1.5rem;
             background: #FBFBFB;
-            border: 1px solid #CBDCEB;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
             color: #1F509A;
-            margin: 0.5rem 0 1rem;
             font-size: 1.8rem;
-        }
-
-        /* Flexbox layout for rows */
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        /* Individual item styling */
-        .item {
             margin-bottom: 1rem;
         }
 
-        .title {
-            font-weight: bold;
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
-            font-size: 1.5rem;
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 1rem;
         }
 
-        .year {
+        .period {
             font-weight: bold;
-            margin-right: 1rem;
-            min-width: 80px;
+            color: #1F509A;
+            padding-top: 0.5rem;
         }
 
-        /* Footer section styles */
+        .details {
+            padding: 1rem;
+        }
+
         footer {
             text-align: center;
             padding: 1rem;
             background: #608BC1;
             color: #CBDCEB;
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <img src="./images/piyachat.jpg" alt="Profile Photo">
-        <h1><strong>Piyachat Udomwong</strong></h1>
-        <p><strong>International College of Digital Information</strong></p>
-        <p><strong>Chiang Mai University</strong></p>
+        <h1>Piyachat Udomwong</h1>
+        <p>International College of Digital Information</p>
+        <p>Chiang Mai University</p>
     </header>
 
-    <!-- Navigation Section -->
     <nav>
         <a href="#education">Education</a>
         <a href="#publications">Publications</a>
@@ -140,117 +120,39 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- Main Content -->
     <main>
-        <!-- Education Section -->
-<section id="education">
-    <h2>Education</h2>
-    <div class="education-grid">
-        <!-- First Entry -->
-        <div class="period">2011-2016</div>
-        <div class="details">
-            <p><strong>PhD in Biology (Bioinformatics)</strong></p>
-            <p>Department of Biology, University of York, United Kingdom</p>
-            <p><strong>Dissertation Title:</strong> Association of genes in bacterial population genomics</p>
-        </div>
-
-        <!-- Second Entry -->
-        <div class="period">2008-2010</div>
-        <div class="details">
-            <p><strong>M.S. Bioinformatics</strong></p>
-            <p>Faculty of Science, Chiang Mai University, Thailand</p>
-            <p><strong>Thesis Title:</strong> Conditional random field for regulatory regions prediction in rice genome</p>
-        </div>
-
-        <!-- Third Entry -->
-        <div class="period">2005-2008</div>
-        <div class="details">
-            <p><strong>B.S. Mathematics HONS (First Class Honors)</strong></p>
-            <p>Department of Mathematics, Faculty of Science, Chiang Mai University, Thailand</p>
-            <p><strong>Senior Project:</strong> An iterative method for algebraic solution to interval equation</p>
-        </div>
-    </div>
-</section>
-
-<style>
-    /* Styles for the Education Section */
-    .education-grid {
-        display: grid; /* Use grid layout */
-        grid-template-columns: 1fr 3fr; /* Two columns: 1/4 for period, 3/4 for details */
-        gap: 1rem; /* Space between rows and columns */
-        margin-top: 1rem;
-    }
-
-    .period {
-        font-weight: bold;
-        color: #1F509A;
-        padding-top: 0.5rem;
-    }
-
-    .details {
-        background-color: #FBFBFB;
-        border: 1px solid #CBDCEB;
-        border-radius: 8px;
-        padding: 1rem;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .details p {
-        margin: 0.3rem 0; /* Spacing between paragraphs */
-    }
-
-    h2 {
-        color: #1F509A;
-        margin: 0.5rem 0 1rem;
-        font-size: 1.8rem;
-    }
-</style>
-
-        <!-- Publications Section -->
-        <section id="publications">
-            <h2>Publications</h2>
-            <div class="row">
-                <div class="title">Book</div>
-                <div class="row item">
-                    <div class="year">2023</div>
-                    <div>
-                        Inkeaw P. <b>Introduction to Data Science (In Thai: วิทยาการข้อมูลเบื้องต้น)</b>. Chiang Mai, Thailand: Chiang Mai University Press; 2023. ISBN (E-book): 978-616-398-866-9.
-                    </div>
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-grid">
+                <div class="period">2011-2016</div>
+                <div class="details">
+                    <p><strong>PhD in Biology (Bioinformatics)</strong></p>
+                    <p>Department of Biology, University of York, United Kingdom</p>
                 </div>
-
-                <div class="title">Book Chapters</div>
-                <div class="row item">
-                    <div class="year">2019</div>
-                    <div>
-                        Inkeaw P., Chaijaruwanich J., Bootkrajang J. <b>Handwritten character recognition for palm-leaf manuscripts</b>. In: Obaidullah SK, Santosh KC, eds. *Document Processing using Machine Learning*. Florida: CRC Press, Taylor & Francis Group; 2019. ISBN: 978-0-367-21847-8.
-                    </div>
-                </div>
-
-                <div class="title">International Journals</div>
-                <div class="row item">
-                    <div class="year">2025</div>
-                    <div>
-                        Taerungruang S. et al. <b>PaSCoNT - Parallel Speech Corpus of Northern-central Thai for automatic speech recognition</b>. *Computer Speech & Language.* 2025; 89: 101692. <a href="https://doi.org/10.1016/j.csl.2024.101692" target="_blank">https://doi.org/10.1016/j.csl.2024.101692</a>.
-                    </div>
+                <div class="period">2008-2010</div>
+                <div class="details">
+                    <p><strong>M.S. Bioinformatics</strong></p>
+                    <p>Faculty of Science, Chiang Mai University, Thailand</p>
                 </div>
             </div>
         </section>
 
-        <!-- Research Section -->
-        <section id="research">
-            <h2>Research</h2>
-            <p>My research interests include [Research Interest 1], [Research Interest 2], and [Research Interest 3]. I aim to contribute to advancements in [Field of Study].</p>
+        <section id="publications">
+            <h2>Publications</h2>
+            <p>Details about recent publications.</p>
         </section>
 
-        <!-- Contact Section -->
+        <section id="research">
+            <h2>Research</h2>
+            <p>Research areas and interests.</p>
+        </section>
+
         <section id="contact">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></p>
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Piyachat Udomwong. All Rights Reserved.</p>
     </footer>

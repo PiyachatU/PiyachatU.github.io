@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Website</title>
+    <title>Personal Website</title>
     <!-- Import Poppins font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <style>
-        /* General styles for the entire website */
+        /* General styles */
         body {
             font-family: 'Poppins', sans-serif;
             font-weight: 300;
@@ -18,7 +18,7 @@
             background-color: #FBFBFB;
         }
 
-        /* Header section styles */
+        /* Header styles */
         header {
             background: #608BC1;
             color: #FBFBFB;
@@ -27,7 +27,6 @@
             padding: 8rem 2rem 3rem;
         }
 
-        /* Profile photo styles */
         header img {
             width: 200px;
             height: 200px;
@@ -38,7 +37,6 @@
             transform: translateX(-50%);
         }
 
-        /* Header text styles */
         header h1 {
             margin: 10rem 0 0.5rem;
             font-size: 2.5rem;
@@ -49,7 +47,7 @@
             font-size: 1rem;
         }
 
-        /* Navigation menu styles */
+        /* Navigation styles */
         nav {
             margin: 1rem auto;
             max-width: 800px;
@@ -59,7 +57,6 @@
             border-radius: 8px;
         }
 
-        /* Link styles in the navigation menu */
         nav a {
             color: #1F509A;
             text-decoration: none;
@@ -91,31 +88,16 @@
             font-size: 1.8rem;
         }
 
-        /* Flexbox layout for rows */
-        .row {
-            display: flex;
-            flex-wrap: wrap;
+        /* Research styles */
+        .research-item {
+            margin-bottom: 1.5rem;
         }
 
-        /* Individual item styling */
-        .item {
-            margin-bottom: 1rem;
+        .research-item p {
+            margin: 0.3rem 0;
+            line-height: 1.4;
         }
 
-        .title {
-            font-weight: bold;
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
-            font-size: 1.5rem;
-        }
-
-        .year {
-            font-weight: bold;
-            margin-right: 1rem;
-            min-width: 80px;
-        }
-
-        /* Footer section styles */
         footer {
             text-align: center;
             padding: 1rem;
@@ -123,35 +105,10 @@
             color: #CBDCEB;
             margin-top: 20px;
         }
-
-        /* Styles for the Education Section */
-        .education-grid {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .period {
-            font-weight: bold;
-            color: #1F509A;
-            padding-top: 0.5rem;
-        }
-
-        .details {
-            background-color: #FBFBFB;
-            border-radius: 8px;
-            padding: 1rem;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .details p {
-            margin: 0.3rem 0;
-        }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
         <img src="./images/piyachat.jpg" alt="Profile Photo">
         <h1><strong>Piyachat Udomwong</strong></h1>
@@ -159,7 +116,7 @@
         <p><strong>Chiang Mai University</strong></p>
     </header>
 
-    <!-- Navigation Section -->
+    <!-- Navigation -->
     <nav>
         <a href="#education">Education</a>
         <a href="#publications">Publications</a>
@@ -169,73 +126,31 @@
 
     <!-- Main Content -->
     <main>
-        <section id="education">
-            <h2>Education</h2>
-            <div class="education-grid">
-                <div class="period">2011-2016</div>
-                <div class="details">
-                    <p><strong>PhD in Biology (Bioinformatics)</strong></p>
-                    <p>Department of Biology, University of York, United Kingdom</p>
-                    <p><strong>Dissertation Title:</strong> Association of genes in bacterial population genomics</p>
-                </div>
-
-                <div class="period">2008-2010</div>
-                <div class="details">
-                    <p><strong>M.S. Bioinformatics</strong></p>
-                    <p>Faculty of Science, Chiang Mai University, Thailand</p>
-                    <p><strong>Thesis Title:</strong> Conditional random field for regulatory regions prediction in rice genome</p>
-                </div>
-
-                <div class="period">2005-2008</div>
-                <div class="details">
-                    <p><strong>B.S. Mathematics HONS (First Class Honors)</strong></p>
-                    <p>Department of Mathematics, Faculty of Science, Chiang Mai University, Thailand</p>
-                    <p><strong>Senior Project:</strong> An iterative method for algebraic solution to interval equation</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="publications">
-            <h2>Publications</h2>
-            <div class="row">
-                <div class="title">Book</div>
-                <div class="row item">
-                    <div class="year">2023</div>
-                    <div>
-                        Inkeaw P. <b>Introduction to Data Science (In Thai: วิทยาการข้อมูลเบื้องต้น)</b>. Chiang Mai, Thailand: Chiang Mai University Press; 2023. ISBN (E-book): 978-616-398-866-9.
-                    </div>
-                </div>
-
-                <div class="title">Book Chapters</div>
-                <div class="row item">
-                    <div class="year">2019</div>
-                    <div>
-                        Inkeaw P., Chaijaruwanich J., Bootkrajang J. <b>Handwritten character recognition for palm-leaf manuscripts</b>. In: Obaidullah SK, Santosh KC, eds. *Document Processing using Machine Learning*. Florida: CRC Press, Taylor & Francis Group; 2019. ISBN: 978-0-367-21847-8.
-                    </div>
-                </div>
-
-                <div class="title">International Journals</div>
-                <div class="row item">
-                    <div class="year">2025</div>
-                    <div>
-                        Taerungruang S. et al. <b>PaSCoNT - Parallel Speech Corpus of Northern-central Thai for automatic speech recognition</b>. *Computer Speech & Language.* 2025; 89: 101692. <a href="https://doi.org/10.1016/j.csl.2024.101692" target="_blank">https://doi.org/10.1016/j.csl.2024.101692</a>.
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- Research Section -->
         <section id="research">
             <h2>Research</h2>
-            <p>My research interests include [Research Interest 1], [Research Interest 2], and [Research Interest 3]. I aim to contribute to advancements in [Field of Study].</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></p>
+            <div class="research-item">
+                <p><strong>Pamonsupornwichit, Thanathat, Kodchakorn, Kanchanok, Udomwong, Piyachat, Sornsuwan, Kanokporn, Weechan, Anuwat, Juntit, On-anon, Nimmanpipug, Piyarat, & Tayapiwatana, Chatchai. (2024).</strong> Engineering affinity of humanized ScFv targeting CD147 antibody: A combined approach of mCSM-AB2 and molecular dynamics simulations. <em>Journal of Molecular Graphics and Modelling,</em> 108884.</p>
+            </div>
+            <div class="research-item">
+                <p><strong>Wang, Zuo, Udomwong, Piyachat, Fu, Jing, & Onpium, Pintusorn. (2024).</strong> Destination image analysis and marketing strategies in emerging panda tourism: a cross-cultural perspective. <em>Cogent Business & Management,</em> 11(1). <a href="https://doi.org/10.1080/23311975.2024.2364837" target="_blank">https://doi.org/10.1080/23311975.2024.2364837</a></p>
+            </div>
+            <div class="research-item">
+                <p><strong>Naing, Shwe Zin Su, & Udomwong, Piyachat. (2024).</strong> Public Opinions on ChatGPT: An Analysis of Reddit Discussions by Using Sentiment Analysis, Topic Modeling, and SWOT Analysis. <em>Data Intelligence,</em> 1-50. (Unpublished manuscript)</p>
+            </div>
+            <div class="research-item">
+                <p><strong>Zheng, Xuying, Miao, Fang, Yuan, Jiaqi, Xia, Huasong, Udomwong, Piyachat, & Chakpitak, Nopasit. (2023).</strong> Preliminary Design and Construction Database for Laboratory Accidents. <em>Electronics,</em> 12(11), 2514.</p>
+            </div>
+            <div class="research-item">
+                <p><strong>Zheng, Xuying, Miao, Fang, Udomwong, Piyachat, & Chakpitak, Nopasit. (2023).</strong> Registered Data-Centered Lab Management System Based on Data Ownership Safety Architecture. <em>Electronics,</em> 12(8), 1817.</p>
+            </div>
+            <div class="research-item">
+                <p><strong>Wang, Zuo, Udomwong, Piyachat, Fu, Jing, & Onpium, Pintusorn. (2023).</strong> Big Data in Tourism Destination Image Measurement: A Review between 2013 and 2022. Paper presented at the 2023 International Conference on Computer Applications Technology (CCAT).</p>
+            </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Piyachat Udomwong. All Rights Reserved.</p>
     </footer>

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
+    <title>Piyachat Udomwong - Personal Website</title>
     <!-- Import Poppins font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <style>
-        /* General styles */
+        /* General styles for the entire website */
         body {
             font-family: 'Poppins', sans-serif;
             font-weight: 300;
@@ -18,7 +18,7 @@
             background-color: #FBFBFB;
         }
 
-        /* Header styles */
+        /* Header section styles */
         header {
             background: #608BC1;
             color: #FBFBFB;
@@ -27,6 +27,7 @@
             padding: 8rem 2rem 3rem;
         }
 
+        /* Profile photo styles */
         header img {
             width: 200px;
             height: 200px;
@@ -37,6 +38,7 @@
             transform: translateX(-50%);
         }
 
+        /* Header text styles */
         header h1 {
             margin: 10rem 0 0.5rem;
             font-size: 2.5rem;
@@ -47,7 +49,7 @@
             font-size: 1rem;
         }
 
-        /* Navigation styles */
+        /* Navigation menu styles */
         nav {
             margin: 1rem auto;
             max-width: 800px;
@@ -88,14 +90,30 @@
             font-size: 1.8rem;
         }
 
-        /* Research styles */
-        .research-item {
-            margin-bottom: 1.5rem;
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 1rem;
         }
 
-        .research-item p {
-            margin: 0.3rem 0;
-            line-height: 1.4;
+        .period {
+            font-weight: bold;
+            color: #1F509A;
+            padding-top: 0.5rem;
+        }
+
+        .details {
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .publications ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .publications li {
+            margin-bottom: 1rem;
         }
 
         footer {
@@ -108,49 +126,81 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
         <img src="./images/piyachat.jpg" alt="Profile Photo">
         <h1><strong>Piyachat Udomwong</strong></h1>
-        <p><strong>International College of Digital Information</strong></p>
+        <p><strong>International College of Digital Innovation</strong></p>
         <p><strong>Chiang Mai University</strong></p>
     </header>
 
-    <!-- Navigation -->
+    <!-- Navigation Section -->
     <nav>
         <a href="#education">Education</a>
         <a href="#publications">Publications</a>
-        <a href="#research">Research</a>
+        <a href="#research">Research Interests</a>
         <a href="#contact">Contact</a>
+        <a href="your_full_cv_link.pdf" target="_blank">Full CV</a>
     </nav>
 
     <!-- Main Content -->
     <main>
-        <!-- Research Section -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-grid">
+                <div class="period">2011-2016</div>
+                <div class="details">
+                    <p><strong>PhD in Biology (Bioinformatics)</strong></p>
+                    <p>University of York, United Kingdom</p>
+                    <p><strong>Dissertation:</strong> Association of genes in bacterial population genomics</p>
+                </div>
+
+                <div class="period">2008-2010</div>
+                <div class="details">
+                    <p><strong>M.S. Bioinformatics</strong></p>
+                    <p>Chiang Mai University, Thailand</p>
+                    <p><strong>Thesis:</strong> Conditional random field for regulatory regions prediction in rice genome</p>
+                </div>
+
+                <div class="period">2005-2008</div>
+                <div class="details">
+                    <p><strong>B.S. Mathematics (First Class Honors)</strong></p>
+                    <p>Chiang Mai University, Thailand</p>
+                    <p><strong>Senior Project:</strong> An iterative method for algebraic solution to interval equation</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="publications">
+                <ul>
+                    <li>Pamonsupornwichit, T., et al. (2024). Engineering affinity of humanized ScFv targeting CD147 antibody... Journal of Molecular Graphics and Modelling.</li>
+                    <li>Wang, Z., et al. (2024). Destination image analysis and marketing strategies in panda tourism... Cogent Business & Management.</li>
+                    <li>Naing, S.Z.S., Udomwong, P. (2024). Public Opinions on ChatGPT... Data Intelligence.</li>
+                    <li>Zheng, X., et al. (2023). Preliminary Design and Construction Database for Laboratory Accidents... Electronics.</li>
+                    <li>Zheng, X., et al. (2023). Registered Data-Centered Lab Management System... Electronics.</li>
+                    <li>Wang, Z., et al. (2023). Big Data in Tourism Destination Image Measurement... CCAT Conference.</li>
+                </ul>
+            </div>
+        </section>
+
         <section id="research">
-            <h2>Research</h2>
-            <div class="research-item">
-                <p><strong>Pamonsupornwichit, Thanathat, Kodchakorn, Kanchanok, Udomwong, Piyachat, Sornsuwan, Kanokporn, Weechan, Anuwat, Juntit, On-anon, Nimmanpipug, Piyarat, & Tayapiwatana, Chatchai. (2024).</strong> Engineering affinity of humanized ScFv targeting CD147 antibody: A combined approach of mCSM-AB2 and molecular dynamics simulations. <em>Journal of Molecular Graphics and Modelling,</em> 108884.</p>
-            </div>
-            <div class="research-item">
-                <p><strong>Wang, Zuo, Udomwong, Piyachat, Fu, Jing, & Onpium, Pintusorn. (2024).</strong> Destination image analysis and marketing strategies in emerging panda tourism: a cross-cultural perspective. <em>Cogent Business & Management,</em> 11(1). <a href="https://doi.org/10.1080/23311975.2024.2364837" target="_blank">https://doi.org/10.1080/23311975.2024.2364837</a></p>
-            </div>
-            <div class="research-item">
-                <p><strong>Naing, Shwe Zin Su, & Udomwong, Piyachat. (2024).</strong> Public Opinions on ChatGPT: An Analysis of Reddit Discussions by Using Sentiment Analysis, Topic Modeling, and SWOT Analysis. <em>Data Intelligence,</em> 1-50. (Unpublished manuscript)</p>
-            </div>
-            <div class="research-item">
-                <p><strong>Zheng, Xuying, Miao, Fang, Yuan, Jiaqi, Xia, Huasong, Udomwong, Piyachat, & Chakpitak, Nopasit. (2023).</strong> Preliminary Design and Construction Database for Laboratory Accidents. <em>Electronics,</em> 12(11), 2514.</p>
-            </div>
-            <div class="research-item">
-                <p><strong>Zheng, Xuying, Miao, Fang, Udomwong, Piyachat, & Chakpitak, Nopasit. (2023).</strong> Registered Data-Centered Lab Management System Based on Data Ownership Safety Architecture. <em>Electronics,</em> 12(8), 1817.</p>
-            </div>
-            <div class="research-item">
-                <p><strong>Wang, Zuo, Udomwong, Piyachat, Fu, Jing, & Onpium, Pintusorn. (2023).</strong> Big Data in Tourism Destination Image Measurement: A Review between 2013 and 2022. Paper presented at the 2023 International Conference on Computer Applications Technology (CCAT).</p>
-            </div>
+            <h2>Research Interests</h2>
+            <p>Bioinformatics, computational biology, comparative genomics, data mining, data analytics, statistic learning, machine learning</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>International College of Digital Innovation</p>
+            <p>Chiang Mai University ∙ 239 Nimmanhaemin Road, Suthep Subdistrict,</p>
+            <p>Muang Chiang Mai District, Chiang Mai, 50200 Thailand</p>
+            <p>Email: piyachat.u@cmu.ac.th, piyachat.u@icdi.cmu.ac.th</p>
+            <p>ORCID: 0000-0002-3915-6411</p>
+            <p>Scopus ID: 56530856100</p>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Piyachat Udomwong. All Rights Reserved.</p>
     </footer>

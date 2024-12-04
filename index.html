@@ -34,7 +34,7 @@
             border-radius: 50%;
             /* border: 4px solid #FBFBFB; */
             position: absolute;
-            top: 2.5rem; /* Adjusted positioning */
+            top: 3.5rem; /* Adjusted positioning */
             left: 50%;
             transform: translateX(-50%);
         }
@@ -143,21 +143,68 @@
     <!-- Main Content -->
     <main>
         <!-- Education Section -->
-        <section id="education">
-            <h2>Education</h2>
-            <div class="row">
-                <div class="item">
-                    <p><strong>2014-2019:</strong> Ph.D. in Computer Science</p>
-                    <p>Department of Computer Science, Faculty of Science, Chiang Mai University, Thailand</p>
-                    <p><strong>Thesis Title:</strong> Lanna Dhamma Handwritten Character Recognition on Palm Leaf Manuscripts Based on Hierarchical Classification</p>
-                </div>
-                <div class="item">
-                    <p><strong>2009-2012:</strong> B.Sc. in Computer Science (1st Class Honours, Gold Medal)</p>
-                    <p>Department of Computer Science, Faculty of Science, Chiang Mai University, Thailand</p>
-                    <p><strong>Senior Project:</strong> Inscription Rubbing Image Analysis for Semi-Automatic Collection of Ancient Character Images: Case Study Inscriptions in Fakkham Scripts</p>
-                </div>
-            </div>
-        </section>
+<section id="education">
+    <h2>Education</h2>
+    <div class="education-grid">
+        <!-- First Entry -->
+        <div class="period">2011-2016</div>
+        <div class="details">
+            <p><strong>PhD in Biology (Bioinformatics)</strong></p>
+            <p>Department of Biology, University of York, United Kingdom</p>
+            <p><strong>Dissertation Title:</strong> Association of genes in bacterial population genomics</p>
+        </div>
+
+        <!-- Second Entry -->
+        <div class="period">2008-2010</div>
+        <div class="details">
+            <p><strong>M.S. Bioinformatics</strong></p>
+            <p>Faculty of Science, Chiang Mai University, Thailand</p>
+            <p><strong>Thesis Title:</strong> Conditional random field for regulatory regions prediction in rice genome</p>
+        </div>
+
+        <!-- Third Entry -->
+        <div class="period">2005-2008</div>
+        <div class="details">
+            <p><strong>B.S. Mathematics HONS (First Class Honors)</strong></p>
+            <p>Department of Mathematics, Faculty of Science, Chiang Mai University, Thailand</p>
+            <p><strong>Senior Project:</strong> An iterative method for algebraic solution to interval equation</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Styles for the Education Section */
+    .education-grid {
+        display: grid; /* Use grid layout */
+        grid-template-columns: 1fr 3fr; /* Two columns: 1/4 for period, 3/4 for details */
+        gap: 1rem; /* Space between rows and columns */
+        margin-top: 1rem;
+    }
+
+    .period {
+        font-weight: bold;
+        color: #1F509A;
+        padding-top: 0.5rem;
+    }
+
+    .details {
+        background-color: #FBFBFB;
+        border: 1px solid #CBDCEB;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .details p {
+        margin: 0.3rem 0; /* Spacing between paragraphs */
+    }
+
+    h2 {
+        color: #1F509A;
+        margin: 0.5rem 0 1rem;
+        font-size: 1.8rem;
+    }
+</style>
 
         <!-- Publications Section -->
         <section id="publications">

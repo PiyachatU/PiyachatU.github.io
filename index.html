@@ -90,21 +90,21 @@
             font-size: 1.8rem;
         }
 
-        .education-grid {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            gap: 1rem;
+        /* Two-column layout for Education section */
+        .education-item {
+            display: flex;
+            margin-bottom: 1.5rem;
         }
 
-        .period {
+        .education-item .period {
+            flex: 1;
             font-weight: bold;
             color: #1F509A;
-            padding-top: 0.5rem;
+            padding-right: 1rem;
         }
 
-        .details {
-            padding: 1rem;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        .education-item .details {
+            flex: 3;
         }
 
         .publications ul {
@@ -147,21 +147,23 @@
     <main>
         <section id="education">
             <h2>Education</h2>
-            <div class="education-grid">
+            <div class="education-item">
                 <div class="period">2011-2016</div>
                 <div class="details">
                     <p><strong>PhD in Biology (Bioinformatics)</strong></p>
                     <p>University of York, United Kingdom</p>
                     <p><strong>Dissertation:</strong> Association of genes in bacterial population genomics</p>
                 </div>
-
+            </div>
+            <div class="education-item">
                 <div class="period">2008-2010</div>
                 <div class="details">
                     <p><strong>M.S. Bioinformatics</strong></p>
                     <p>Chiang Mai University, Thailand</p>
                     <p><strong>Thesis:</strong> Conditional random field for regulatory regions prediction in rice genome</p>
                 </div>
-
+            </div>
+            <div class="education-item">
                 <div class="period">2005-2008</div>
                 <div class="details">
                     <p><strong>B.S. Mathematics (First Class Honors)</strong></p>

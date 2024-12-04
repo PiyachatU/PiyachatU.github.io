@@ -12,7 +12,7 @@
             font-weight: 200;
             margin: 0;
             padding: 0;
-            line-height: 1.4; /* Reduced line spacing */
+            line-height: 1.5;
             color: #608BC1;
             background-color: #FBFBFB;
         }
@@ -21,8 +21,7 @@
             color: #FBFBFB;
             text-align: center;
             position: relative;
-            padding-top: 10rem; /* Increased space above title */
-            padding-bottom: 2rem;
+            padding: 12rem 2rem 3rem;
         }
         header img {
             width: 120px;
@@ -30,16 +29,16 @@
             border-radius: 50%;
             border: 4px solid #FBFBFB;
             position: absolute;
-            top: 2rem; /* Position image */
+            top: 2rem;
             left: 50%;
             transform: translateX(-50%);
         }
         header h1 {
-            margin: 2rem 0 0; /* Increased space between photo and title */
-            font-size: 2.5rem; /* Adjusted font size for title */
+            margin: 3rem 0 0.5rem;
+            font-size: 2.5rem;
         }
         header p {
-            margin: 0.5rem 0; /* Reduced space between subtitle lines */
+            margin: 0.5rem 0;
             font-size: 1rem;
         }
         nav {
@@ -62,7 +61,7 @@
         section {
             max-width: 800px;
             margin: 20px auto;
-            padding: 1.5rem; /* Adjusted padding for better spacing */
+            padding: 1.5rem;
             background: #FBFBFB;
             border: 1px solid #CBDCEB;
             border-radius: 8px;
@@ -70,8 +69,29 @@
         }
         h2 {
             color: #1F509A;
-            margin: 0.5rem 0 1rem; /* Increased space above and reduced space below titles */
+            margin: 0.5rem 0 1rem;
             font-size: 1.8rem;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item {
+            margin-bottom: 1rem;
+        }
+        .title {
+            font-weight: bold;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        .year {
+            font-weight: bold;
+            margin-right: 1rem;
+            min-width: 80px;
+        }
+        ul {
+            padding-left: 1.2rem;
         }
         footer {
             text-align: center;
@@ -87,47 +107,74 @@
         <img src="./images/piyachat.jpg" alt="Profile Photo">
         <h1><strong>Piyachat Udomwong</strong></h1>
         <p><strong>International College of Digital Information</strong></p>
-        <p><strong>Chiang Mai University </strong></p>
+        <p><strong>Chiang Mai University</strong></p>
     </header>
 
     <nav>
-        <a href="#overview">Education</a>
+        <a href="#education">Education</a>
         <a href="#publications">Publications</a>
         <a href="#research">Research</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <section id="education">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>Year:</strong> 2020</li>
-            <li><strong>Degree:</strong> Master of Science in Digital Innovation</li>
-            <li><strong>Thesis Title:</strong> "The Impact of Digital Transformation in Educational Institutions"</li>
-            <li><strong>Department:</strong> Department of Digital Innovation</li>
-            <li><strong>Faculty:</strong> Faculty of Engineering</li>
-        </ul>
+    <main>
+        <section id="education">
+            <h2>Education</h2>
+            <div class="row">
+                <div class="item">
+                    <p><strong>2014-2019:</strong> Ph.D. in Computer Science</p>
+                    <p>Department of Computer Science, Faculty of Science, Chiang Mai University, Thailand</p>
+                    <p><strong>Thesis Title:</strong> Lanna Dhamma Handwritten Character Recognition on Palm Leaf Manuscripts Based on Hierarchical Classification</p>
+                </div>
+                <div class="item">
+                    <p><strong>2009-2012:</strong> B.Sc. in Computer Science (1st Class Honours, Gold Medal)</p>
+                    <p>Department of Computer Science, Faculty of Science, Chiang Mai University, Thailand</p>
+                    <p><strong>Senior Project:</strong> Inscription Rubbing Image Analysis for Semi-Automatic Collection of Ancient Character Images: Case Study Inscriptions in Fakkham Scripts</p>
+                </div>
+            </div>
+        </section>
 
-    </section>
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="row">
+                <div class="title">Book</div>
+                <div class="row item">
+                    <div class="year">2023</div>
+                    <div>
+                        Inkeaw P. <b>Introduction to Data Science (In Thai: วิทยาการข้อมูลเบื้องต้น)</b>. Chiang Mai, Thailand: Chiang Mai University Press; 2023. ISBN (E-book): 978-616-398-866-9.
+                    </div>
+                </div>
 
-    <section id="publications">
-        <h2>Publications</h2>
-        <ul>
-            <li><strong>Paper 1:</strong> Title of the paper, Journal Name, Year.</li>
-            <li><strong>Paper 2:</strong> Title of the paper, Journal Name, Year.</li>
-            <li><strong>Paper 3:</strong> Title of the paper, Journal Name, Year.</li>
-        </ul>
-    </section>
+                <div class="title">Book Chapters</div>
+                <div class="row item">
+                    <div class="year">2019</div>
+                    <div>
+                        Inkeaw P., Chaijaruwanich J., Bootkrajang J. <b>Handwritten character recognition for palm-leaf manuscripts</b>. In: Obaidullah SK, Santosh KC, eds. *Document Processing using Machine Learning*. Florida: CRC Press, Taylor & Francis Group; 2019. ISBN: 978-0-367-21847-8.
+                    </div>
+                </div>
 
-    <section id="research">
-        <h2>Research</h2>
-        <p>My research interests include [Research Interest 1], [Research Interest 2], and [Research Interest 3]. I aim to contribute to advancements in [Field of Study].</p>
-    </section>
+                <div class="title">International Journals</div>
+                <div class="row item">
+                    <div class="year">2025</div>
+                    <div>
+                        Taerungruang S. et al. <b>PaSCoNT - Parallel Speech Corpus of Northern-central Thai for automatic speech recognition</b>. *Computer Speech & Language.* 2025; 89: 101692. <a href="https://doi.org/10.1016/j.csl.2024.101692" target="_blank">https://doi.org/10.1016/j.csl.2024.101692</a>.
+                    </div>
+                </div>
+                <!-- Add remaining publications here following the same structure -->
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-    </section>
+        <section id="research">
+            <h2>Research</h2>
+            <p>My research interests include [Research Interest 1], [Research Interest 2], and [Research Interest 3]. I aim to contribute to advancements in [Field of Study].</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></p>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2024 Piyachat Udomwong. All Rights Reserved.</p>
